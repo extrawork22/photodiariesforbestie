@@ -1,0 +1,188 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #f6d365, #fda085);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    margin: 20px auto;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease-out;
+}
+
+.welcome-section h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    animation: slideIn 1s ease-out;
+}
+
+/* Button Styles for Yes/No */
+.options button {
+    margin: 15px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#yes {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#no {
+    background: linear-gradient(45deg, #ff6a00, #ff7b00);
+    color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#yes:hover, #no:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Animation for Button Hover Effect */
+@keyframes buttonHover {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#yes, #no {
+    animation: buttonHover 1.5s infinite;
+}
+
+/* Slideshow Section */
+.slideshow-section {
+    display: none;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #ff8a00, #e52e71, #9d50bb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: shimmer 3s infinite linear;
+}
+
+.slideshow {
+    position: relative;
+    width: 80%;
+    max-width: 500px;
+    margin: auto;
+    overflow: hidden;
+    border: 2px solid white;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.slide {
+    display: none;
+    animation: slideIn 2s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.shayari {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#prev, #next {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.7);
+    color: #fda085;
+    transition: background 0.3s ease;
+}
+
+#prev:hover, #next:hover {
+    background: #fff;
+}
+
+/* Footer Section */
+footer {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #fff;
+    padding: 20px;
+    background: linear-gradient(90deg, #ff7eb3, #ff758c, #ff6a68);
+    border-radius: 12px;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px;
+    animation: glow 5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0px 6px 10px rgba(255, 117, 140, 0.6);
+    }
+    to {
+        box-shadow: 0px 6px 20px rgba(255, 117, 140, 1);
+    }
+}
+
+/* Fade In and Slide In Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Shimmer Animation */
+@keyframes shimmer {
+    0% {
+        background-position: -100%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
